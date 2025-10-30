@@ -9,8 +9,12 @@ public class Vehicle extends Asset {
     protected int year;
     protected int odometer;
 
-    public Vehicle(String description, String dateAcquired, double originalCost) {
+    public Vehicle(String description, String dateAcquired, double originalCost, String makeModel, int year, int odometer) {
         super(description, dateAcquired, originalCost);
+
+        this.makeModel= makeModel;
+        this.setYear(year);
+        this.setOdometer(odometer);
     }
 
     public String getMakeModel() {
